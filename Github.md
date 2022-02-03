@@ -32,11 +32,11 @@ github 设置免密登录
 
 ```bash
 #1.生成公私钥(在家目录下的.ssh文件夹下)
-ssh-keygen -t rsa	
+ssh-keygen -t rsa -C "1245829528@qq.com"
 
 #2.将公钥拷贝到github上的 SSH keys 下面
 
-#3.测试是否配置成功
+#3.测试是否配置成功,只要没有显示 Permission denied 就表示配置成功了
 ssh -T git@github.com
 
 #4.之后就可以进行push这些操作了
