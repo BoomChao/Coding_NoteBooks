@@ -264,7 +264,7 @@ git push origin main
 git pull [<options>] [<repository> [<refspec>]]
 ```
 
-git pull 相当于 git fetch 跟着一个 git merge FETCH_HEAD；\<repository>是仓库的名字，\<refspec>是分支的名字，如果都不写则会有一个默认值
+git pull 相当于 git fetch 跟着一个 git merge FETCH_HEAD；\<repository> 是仓库的名字，\<refspec> 是分支的名字，如果都不写则会有一个默认值
 
 使用方式
 
@@ -333,7 +333,7 @@ A--B--D--E--C--F'			#将两个分支融合成一个线性的提交
 
 **答：**git revert 是用一次新的提交来回滚之前的commit，也就是用一个新提交来消除之前的一个历史提交所作的任何修改；而 git reset 是直接删除指定的 commit
 
-git revert 是让HEAD继续前进，而 git reset 是把 HEAD 向后移动了一下
+git revert 是让 HEAD 继续前进，而 git reset 是把 HEAD 向后移动了一下
 
 应用场景：用 git 提交代码的时候，如果发现这一次的 commit 是错误的，那么就有以上两种处理方法
 

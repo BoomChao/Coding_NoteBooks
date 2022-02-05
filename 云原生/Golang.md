@@ -1162,7 +1162,7 @@ func main() {
 
 #### 11.Golang调试
 
-通过 go tool nm 可以查看该文件中实现了哪些函数，nm会输出OBJ文件中定义或使用到的符号信息，通过 grep 命令过滤代码段符号对应的T标识，即可查看文件中实现的函数
+通过 go tool nm 可以查看该文件中实现了哪些函数，nm会输出OBJ文件中定义或使用到的符号信息，通过 grep 命令过滤代码段符号对应的 T 标识，即可查看文件中实现的函数
 
 Golang中的 *_test.go 全都是测试文件，其中的 BenchMark 测试要写在这个文件里面
 
@@ -1240,7 +1240,7 @@ IPv4的环回地址为：127.0.0.0 到 127.255.255.255 都是环回地址（只�
 
 
 
-**localhost** 首先是一个域名（如同：www.baidu.com），也是本机地址，它可以被配置为任意的IP地址（也就是说，可以通过hosts这个文件进行更改的），不过通常情况下都指向：
+**localhost** 首先是一个域名（如同：www.baidu.com），也是本机地址，它可以被配置为任意的 IP 地址（也就是说，可以通过 hosts 这个文件进行更改的），不过通常情况下都指向：
 IPv4：表示  127.0.0.1
 
 查看 Hosts 文件位于 `/etc/hosts`
@@ -1332,14 +1332,14 @@ fmt.Scanln(&a, &b)
 
 
 
-golang 使用简短方式声明变量，左侧必须要有一个新变量，变量也可以重复声明。
+golang 使用简短方式声明变量，左侧必须要有一个新变量，变量也可以重复声明
 
 ```go
 func main() {
 	test1 := 0
 	test1, test2:= 1, 2	
     
-    test1:= 3 	//错误,因为左侧没有一个新变量
+    test1 := 3 	//错误,因为左侧没有一个新变量
   	test1 = 3 	//正确
 }
 ```
@@ -1357,7 +1357,7 @@ res = append(res, path)
 //由于slice是通过引用来传递不是值传递，所以这时res结果为 [[10,2,3],[10,2,3]]
 
 cp := make([]int, len(path))
-copy(cp, x)
+copy(cp, path)
 cp[0] = 10
 res = append(res, cp)		//这时res结果为 [[1,2,3],[10,2,3]] 
 
@@ -1470,8 +1470,8 @@ func main() {
 ```go
 var str string
 fmt.Scan(&str)		
-mt.Println(str)		
-mt.Scanf("%s", &str)
+fmt.Println(str)		
+fmt.Scanf("%s", &str)
 ```
 
 使用第三方库即可
@@ -1555,7 +1555,7 @@ func main() {
     
     // golang 中的方法本质上就是普通函数，而接收者就是隐含的第一个参数
     t1 := reflect.TypeOf(A.Name)
-    t2 := reflect.TypeOf(NameOfA)
+    t2 := reflect.TypeOf(NameOf)
     fmt.Println(t1 == t2)		// 输出true
 }
 ```
